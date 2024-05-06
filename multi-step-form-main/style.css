@@ -1,0 +1,655 @@
+@import url("https://fonts.googleapis.com/css2?family=ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+/* ### Primary
+
+- Marine blue: hsl(213, 96%, 18%)
+- Purplish blue: hsl(243, 100%, 62%)
+- Pastel blue: hsl(228, 100%, 84%)
+- Light blue: hsl(206, 94%, 87%)
+- Strawberry red: hsl(354, 84%, 57%)
+
+### Neutral
+
+- Cool gray: hsl(231, 11%, 63%)
+- Light gray: hsl(229, 24%, 87%)
+- Magnolia: hsl(217, 100%, 97%)
+- Alabaster: hsl(231, 100%, 99%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 16px
+
+### Font
+
+- Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu)
+- Weights: 400, 500, 700 */
+
+.parent {
+  height: 100dvh;
+  max-width: 100dvw;
+  display: grid;
+  place-items: center;
+  background-color: hsl(217, 100%, 97%);
+}
+.container {
+  max-width: 80rem;
+  /* height: 50vh; */
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 2rem;
+}
+/* sidebar image design */
+.sidebar {
+  /* width: 200px; */
+  width: 100%;
+}
+.sidebar_img-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.step_list {
+  position: absolute;
+  top: 7vh;
+  left: 6%;
+  list-style: none;
+  padding: 3rem;
+  font-size: 2rem;
+}
+.step_list li {
+  display: flex;
+  width: 160px;
+  margin-top: 2rem;
+}
+.number {
+  background-color: rgba(0, 0, 255, 0.4);
+  color: white;
+  padding-top: 6px;
+  height: 3rem;
+  width: 3rem;
+  margin-top: 1.2rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.number_detail {
+  text-transform: uppercase;
+  margin-left: 2.2rem;
+}
+.number_detail span {
+  font-size: 1.2rem;
+  color: hsl(231, 11%, 63%);
+  font-weight: 400;
+}
+.number_detail h6 {
+  color: hsl(217, 100%, 97%);
+  margin-top: 0.2rem;
+}
+.sidebar_img {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+/* step-1 design starts */
+.step1 {
+  padding: 4rem 6rem;
+  padding-bottom: 0;
+  /* background-color: red; */
+}
+.step_content {
+  margin: 2rem 0;
+  line-height: 1.6;
+}
+.header-tertiary {
+  font-size: 3rem;
+  font-weight: 600;
+  color: hsl(213, 96%, 18%);
+}
+.header-secondary {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: hsl(231, 11%, 63%);
+}
+
+/* step-1 form starts */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  gap: 1.9rem;
+}
+.form p label {
+  font-size: 1.4rem;
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
+.form p input {
+  padding: 2rem;
+  color: hsl(231, 11%, 63%);
+  border-radius: 0.6rem;
+  outline: none;
+  border: 1px solid hsl(229, 24%, 87%);
+}
+.form p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.form_block {
+  position: relative;
+}
+.error_field-name,
+.error_field-email,
+.error_field-number {
+  content: "This field is required";
+  color: red;
+  position: absolute;
+  top: 1%;
+  left: 68%;
+  display: none;
+  font-weight: bold;
+}
+.input_name:hover,
+.input_email:hover,
+.input_number:hover {
+  cursor: pointer;
+  border: 1px solid hsl(243, 100%, 62%);
+}
+/* step2 flex design starts */
+.step2 {
+  /* background-color: red; */
+  display: flex;
+  height: 200px;
+  gap: 2rem;
+}
+.step2_item-price h3 {
+  color: hsl(243, 100%, 62%);
+  margin-bottom: 5px;
+}
+#step2_item {
+  padding: 1.2rem;
+  width: 11rem;
+  /* background: red; */
+  height: 15rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  /* align-items: center; */
+}
+
+#step2_item:hover {
+  cursor: pointer;
+  border: 1px solid hsl(243, 100%, 62%);
+}
+
+#step2_item p {
+  margin-bottom: 3rem;
+}
+.step2-element {
+  display: flex;
+  color: hsl(213, 96%, 18%);
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  background: hsl(217, 100%, 97%);
+  gap: 2rem;
+  padding: 1.2rem;
+  /* background: red; */
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: hsl(243, 100%, 62%);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(243, 100%, 62%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.itemPrice_free {
+  color: hsl(213, 96%, 18%);
+  font-weight: bold;
+  margin-top: 5px;
+}
+.itemPrice_h3 {
+  color: hsl(213, 96%, 18%);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* step-2 ends  */
+/* step-3 starts  */
+.step3 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.step3_item {
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid white;
+}
+.step3_item:hover {
+  border: 1px solid hsl(243, 100%, 62%);
+}
+.step3_item-detail {
+  /* background-color: red; */
+  width: 26rem;
+}
+.step3_item-detail h5 {
+  font-size: 1.4rem;
+}
+.step3_item span {
+  color: hsl(243, 100%, 62%);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* step-4 starts */
+
+.step4 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  padding: 0.5rem 2rem 2rem 1rem;
+  background-color: rgba(173, 190, 255, 0.1);
+}
+.step4 span {
+  font-size: 1.3rem;
+  color: #414886a2;
+}
+.item_change {
+  padding: 1.2rem;
+}
+.item_change a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
+}
+.item p {
+  margin-left: 3%;
+}
+.step4_total {
+  display: flex;
+  font-size: 1.3rem;
+  padding-top: 1.8rem;
+  justify-content: space-between;
+}
+.step4_total p {
+  margin-left: 4%;
+}
+.step4_total span {
+  margin-right: 9%;
+  font-style: 2rem;
+  color: blue;
+  font-weight: bolder;
+}
+
+/* .item:nth-child(1) {
+  border-bottom: 1px solid black;
+  
+} */
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+.item p {
+  font-size: 1.3rem;
+  color: #555;
+}
+
+/* step4 ends */
+.btn_goback {
+  position: absolute;
+  display: inline-block;
+  border: none;
+  font-size: 1.8rem;
+  color: hsl(231, 11%, 63%);
+  top: 1rem;
+  left: 1%;
+}
+.btn_goback:hover {
+  cursor: pointer;
+  background-color: hsl(231, 100%, 99%);
+  color: hsl(213, 96%, 18%);
+}
+.btn_div {
+  text-align: end;
+  padding-top: 8rem;
+}
+.btn {
+  padding: 1rem 1.7rem;
+  border-radius: 1rem;
+  background-color: #1b3e6b;
+  color: hsl(229, 24%, 87%);
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: hsl(213, 89%, 18%);
+}
+/* step5_block starts */
+.step5_block {
+  display: none;
+}
+
+.success {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.success p {
+  font-size: 1.5rem;
+  color: hsl(231, 11%, 63%);
+  line-height: 1.5;
+}
+.success h3 {
+  font-size: 3rem;
+}
+
+@media (max-width: 49.375em) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width: 40em) {
+  .parent {
+    place-items: start;
+  }
+  .container {
+    /* height: 90%; */
+    background-color: hsl(217, 100%, 97%);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+  .step1 {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 2rem;
+    width: 88%;
+    position: absolute;
+    top: 21%;
+    right: 7%;
+    height: 77vh;
+  }
+  .header-tertiary {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .header-secondary {
+    font-size: 2rem;
+  }
+  .form {
+    gap: 4rem;
+  }
+
+  .form p label {
+    font-size: 190%;
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
+  }
+  .form input {
+    padding: 2rem;
+    color: hsl(231, 11%, 63%);
+    border-radius: 0.8rem;
+    font-size: 200%;
+    border: 1px solid hsl(231, 11%, 63%);
+  }
+
+  /* .input_name {
+    background-color: red;
+  } */
+  .sidebar_img-box {
+    height: 40vh;
+    position: relative;
+  }
+  .sidebar_img {
+    object-fit: cover;
+    object-position: bottom;
+  }
+  .step_list {
+    position: absolute;
+    top: 8%;
+    left: 22%;
+    list-style: none;
+    padding: 1rem;
+    font-size: 2rem;
+    display: flex;
+    width: 70%;
+  }
+
+  .step_list li {
+    display: flex;
+    width: 20%;
+    margin-top: 2rem;
+  }
+  .number {
+    height: 5rem;
+    width: 5rem;
+    font-size: 149%;
+  }
+
+  .number_detail {
+    text-transform: uppercase;
+    margin-left: 1rem;
+    display: none;
+  }
+
+  /* step list ends */
+  .btn_goback {
+    margin-top: 0%;
+    font-size: 2.5rem;
+    left: -203px;
+    color: hsl(231, 11%, 63%);
+  }
+  .btn_div {
+    position: absolute;
+    top: 75vh;
+    right: 7%;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  /* step-2 design  */
+  .step2 {
+    flex-direction: column;
+    gap: clamp(6%, 9%, 14%);
+    height: 286px;
+  }
+  #step2_item {
+    width: 100%;
+    position: relative;
+    height: 53%;
+  }
+  #step2_item p {
+    margin-bottom: 4rem;
+  }
+  .step2_item-price {
+    position: absolute;
+    font-size: 2rem;
+    top: 19%;
+    left: 29%;
+  }
+  .step2_item-price h3 {
+    margin-bottom: 9%;
+  }
+  #step2_item p svg {
+    margin-top: 5%;
+    width: 16%;
+  }
+  /* .itemPrice_free {
+    padding-bottom: 2%;
+  } */
+
+  #step2_item:hover {
+    cursor: pointer;
+    border: 1px solid hsl(243, 100%, 62%);
+  }
+  .step2_block {
+    position: relative;
+  }
+  .step2-element {
+    position: absolute;
+    top: 67vh;
+    right: 3%;
+    width: 94%;
+    font-size: 2rem;
+  }
+  /* step3 */
+  .step3 {
+    gap: 3.3rem;
+  }
+  .step3_item-detail {
+    /* background-color: red; */
+    margin-left: 8%;
+  }
+  .step3_item-detail h5 {
+    font-size: 150%;
+  }
+  .step3_item-detail p {
+    font-size: 135%;
+  }
+  .step3_item span {
+    font-size: 140%;
+  }
+  /* step 4 */
+  .item p {
+    font-size: 1.7rem;
+  }
+  .step4 {
+    gap: 33%;
+  }
+  .step4 span {
+    font-size: 1.5rem;
+    color: hsl(213, 96%, 18%);
+    font-weight: bolder;
+  }
+  .step4_total {
+    margin-top: 3rem;
+  }
+  .step4_total p {
+    font-size: 1.8rem;
+    color: #555;
+  }
+  .step4_total span {
+    font-size: 1.6rem;
+  }
+  .success {
+    padding-top: 19%;
+  }
+
+  .success p {
+    font-size: 211%;
+    color: hsl(231, 11%, 63%);
+    line-height: 1.5;
+  }
+  .success h3 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 23.875em) {
+  html {
+    font-size: 7px;
+  }
+  .parent {
+    height: 115dvh;
+  }
+  .step2-element {
+    top: 100%;
+  }
+  .step1 {
+    height: 89vh;
+  }
+  .step2-element {
+    top: 88%;
+  }
+  .btn_div {
+    top: 84vh;
+  }
+}
